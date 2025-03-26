@@ -1,0 +1,14 @@
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Rest.dll
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Rest.pdb
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Comun.dll
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Modelo.dll
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Comun.pdb
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Modelo.pdb
+C:\Users\lauty\source\repos\Hospital\Rest\obj\Debug\Rest.csproj.AssemblyReference.cache
+C:\Users\lauty\source\repos\Hospital\Rest\obj\Debug\Rest.csproj.CoreCompileInputs.cache
+C:\Users\lauty\source\repos\Hospital\Rest\obj\Debug\Rest.csproj.Up2Date
+C:\Users\lauty\source\repos\Hospital\Rest\obj\Debug\Rest.dll
+C:\Users\lauty\source\repos\Hospital\Rest\obj\Debug\Rest.pdb
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\EntityFramework.dll
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\Modelo.dll.config
+C:\Users\lauty\source\repos\Hospital\Rest\bin\Debug\EntityFramework.xml

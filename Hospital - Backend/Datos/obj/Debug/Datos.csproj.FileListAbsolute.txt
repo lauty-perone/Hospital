@@ -1,0 +1,17 @@
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Datos.dll
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Datos.pdb
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Comun.dll
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Modelo.dll
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Comun.pdb
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Modelo.pdb
+C:\Users\lauty\source\repos\Hospital\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\lauty\source\repos\Hospital\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\lauty\source\repos\Hospital\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\lauty\source\repos\Hospital\Datos\obj\Debug\Datos.dll
+C:\Users\lauty\source\repos\Hospital\Datos\obj\Debug\Datos.pdb
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Datos.dll.config
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\EntityFramework.dll
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\Modelo.dll.config
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\EntityFramework.xml
+C:\Users\lauty\source\repos\Hospital\Datos\bin\Debug\EntityFramework.SqlServer.xml
