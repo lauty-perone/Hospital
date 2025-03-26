@@ -1,0 +1,6 @@
+C:\Users\lauty\source\repos\Hospital\Comun\bin\Debug\Comun.dll
+C:\Users\lauty\source\repos\Hospital\Comun\bin\Debug\Comun.pdb
+C:\Users\lauty\source\repos\Hospital\Comun\obj\Debug\Comun.csproj.AssemblyReference.cache
+C:\Users\lauty\source\repos\Hospital\Comun\obj\Debug\Comun.csproj.CoreCompileInputs.cache
+C:\Users\lauty\source\repos\Hospital\Comun\obj\Debug\Comun.dll
+C:\Users\lauty\source\repos\Hospital\Comun\obj\Debug\Comun.pdb
