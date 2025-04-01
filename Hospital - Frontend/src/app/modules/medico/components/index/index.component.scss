@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
+
+.create-button {
+    padding: 10px 14px; /* Aumenta el tamaño del botón */
+    font-size: 15px; /* Ajusta el tamaño de texto */
+    border-radius: 10px; /* Opcional: redondea las esquinas */
+}
+
+.search-bar {
+    width: 400px; /* Ajusta la longitud */
+    height: 80px; /* Ajusta la altura */
+    font-size: 20px; /* Aumenta el tamaño de texto */
+    padding: 4px; /* Reduce el padding interno */
+
+}
+
+.search-bar-container {
+    margin-left: auto; /* Alinea la barra al lado derecho */
+  }

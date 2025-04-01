@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.casa-boton {
+      background-color: #3F51B5; /* Fondo azul */
+      color: white; /* Texto blanco */
+      border: none; /* Sin bordes */
+      border-radius: 50%; /* Hace que el botón sea redondo */
+      width: 40px; /* Ancho del botón */
+      height: 40px; /* Altura del botón */
+      display: flex; /* Centra el texto */
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      font-size: 12px; /* Tamaño del texto reducido */
+      cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  .casa-boton:hover {
+      background-color: #003399; /* Color más oscuro al pasar el ratón */
+  }
+
+  

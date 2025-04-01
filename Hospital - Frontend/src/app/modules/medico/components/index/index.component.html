@@ -1,1 +1,81 @@
-<p>index works!</p>
+<mat-toolbar class="my-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <button (click)="crearMedico()" class="create-button"  mat-raised-button color="primary"> 
+                    <mat-icon>add_circle_outline</mat-icon>
+                    Crear    
+                </button>
+            </div>
+            <div class="col-4">
+                <mat-form-field appearance="fill" class="search-bar">
+                    <mat-label>Buscar </mat-label>
+                    <input  [(ngModel)] ="textoBusqueda" name="textoBusqueda" (keyup.enter)="LeerTodo()" matInput>
+                    <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>        
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+
+<div class="contanier fluid">
+    <div class="row">
+        <div class="col">
+            <div  class="mat-elevation-z8" >
+                <table mat-table [dataSource]="dataSource">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="cedula">
+                  <th mat-header-cell *matHeaderCellDef> Cédula </th>
+                  <td mat-cell *matCellDef="let element"> {{element.cedula}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="nombre">
+                  <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                  <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="esEspecialista">
+                  <th mat-header-cell *matHeaderCellDef> Especialista </th>
+                  <td mat-cell *matCellDef="let element"> {{element.esEspecialista ? 'Si' : 'No'}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="acciones">
+                  <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                  <td mat-cell *matCellDef="let element">
+                    <button (click)="Eliminar(element.id)" matTooltip="Eliminar elemento" mat-icon-button color="warn">
+                        <mat-icon>delete</mat-icon>
+                    </button> 
+                </td>
+                </ng-container>
+                
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                <tr class="mat-row" *matNoDataRow="">
+                    <td class="mat-cell"[attr.colspan]="displayedColumns.length">
+                        <div class="mensaje-no-existen-datos">
+                            <mat-icon class="mx-3">error</mat-icon>No existen datos para mostrar
+                        </div>     
+                    </td>
+                </tr>
+            </table>
+              <mat-paginator #paginator
+                        (page)="cambiarPagina($event)"
+                        [length]="cantidadTotal"
+                        [pageSize]="cantidadPorPagina"
+                        [showFirstLastButtons]="true"
+                        [pageSizeOptions]="opcionesDePaginado"
+                        [pageIndex]="numeroDePagina">
+            </mat-paginator>   
+            </div>
+            
+        </div>
+    </div>
+</div>
