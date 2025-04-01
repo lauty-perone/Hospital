@@ -1,10 +1,10 @@
 import { Routes } from "@angular/router";
 import { IndexComponent } from "./components/index/index.component";
 
-export const pacienteRoutes: Routes = [
+export const ingresoRoutes: Routes = [
     {
-        path: 'paciente/index',
+        path: 'ingreso/index',
         component: IndexComponent,
-        loadChildren: () => import('./paciente.module').then(m => m.PacienteModule)
+        loadChildren: () => import('./ingreso.module').then(m => m.IngresoModule)
     }
 ];
