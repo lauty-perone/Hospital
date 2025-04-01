@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { HttpService } from '../../../../services/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
@@ -10,9 +10,10 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { FormComponent } from '../form/form.component';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 @Component({
   imports: [HttpClientModule,
@@ -25,9 +26,10 @@ import { FormComponent } from '../form/form.component';
     MatPaginatorModule,
     FormsModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule,MatSort
   ],
-  selector: 'app-index',
+  selector: 'app-index-unique',
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
@@ -42,6 +44,7 @@ export class IndexComponent implements OnInit {
 
   textoBusqueda = '';
 
+  @ViewChild(MatSort) sort! : MatSort;
   constructor(
     private httpService: HttpService,
     private toastr : ToastrService,
@@ -52,11 +55,14 @@ export class IndexComponent implements OnInit {
     this.LeerTodo();
   }
 
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
   LeerTodo(){
     this.httpService.LeerTodo(this.cantidadPorPagina, this.numeroDePagina, this.textoBusqueda )
       .subscribe((respuesta: any) => { 
          this.dataSource.data = respuesta.datos.elemento;
-         this.cantidadTotal = respuesta.datos.cantidadTotal;       
+         this.cantidadTotal = respuesta.datos.cantidadTotal; 
       });
   }
   cambiarPagina(event : any){
@@ -71,9 +77,9 @@ export class IndexComponent implements OnInit {
     
     if(confirmacion){
       let ids = [medicoId];
-      
+      this.toastr.toastrConfig.enableHtml = true;
       this.httpService.Eliminar(ids).subscribe((respuesta: any) => { 
-          this.toastr.success("Elemento <b> eliminado </b> satisfactoriamente","Confirmación")
+          this.toastr.success("Elemento <b>eliminado</b> satisfactoriamente","Confirmación")
           this.LeerTodo();      
         });
     }
@@ -93,6 +99,9 @@ export class IndexComponent implements OnInit {
   
       dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);
+        this.LeerTodo();
+        this.dataSource.sort = this.sort;
+
       });
     }
 }

@@ -5,7 +5,6 @@ import { AppRoutingModule } from "./app.routes";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GlobalModule } from "./modules/global/global.module";
 import { HttpClientModule } from "@angular/common/http";
-import { ToastrModule, ToastrService } from "ngx-toastr";
 
 
 @NgModule({
